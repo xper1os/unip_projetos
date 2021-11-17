@@ -1,0 +1,6 @@
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\bin\Debug\cl-Model.dll
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\bin\Debug\cl-Model.pdb
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\obj\Debug\cl-Model.csproj.AssemblyReference.cache
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\obj\Debug\cl-Model.csproj.CoreCompileInputs.cache
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\obj\Debug\cl-Model.dll
+C:\Users\m-mor\source\repos\sl-hotel\cl-Model\obj\Debug\cl-Model.pdb

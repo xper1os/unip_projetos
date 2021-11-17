@@ -1,0 +1,9 @@
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\bin\Debug\cl-Dal.dll
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\bin\Debug\cl-Dal.pdb
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\bin\Debug\cl-Model.dll
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\bin\Debug\cl-Model.pdb
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\obj\Debug\cl-Dal.csproj.AssemblyReference.cache
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\obj\Debug\cl-Dal.csproj.CoreCompileInputs.cache
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\obj\Debug\cl-Dal.csproj.CopyComplete
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\obj\Debug\cl-Dal.dll
+C:\Users\m-mor\source\repos\sl-hotel\cl-Dal\obj\Debug\cl-Dal.pdb
