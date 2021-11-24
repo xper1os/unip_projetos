@@ -48,6 +48,18 @@ namespace wf_hotel
             _Hospede.IdHospede = Int32.Parse(dgListaHospedes[0, vi].Value.ToString());
             _Hospede.PrimeiroNomeHospede = dgListaHospedes[1, vi].Value.ToString();
             _Hospede.UltimoNomeHospede = dgListaHospedes[2, vi].Value.ToString();
+            _Hospede.Cpf = Decimal.Parse(dgListaHospedes[3, vi].Value.ToString());
+            _Hospede.Rg = dgListaHospedes[4, vi].Value.ToString();
+            _Hospede.Email = dgListaHospedes[5, vi].Value.ToString();
+            _Hospede.Logradouro = dgListaHospedes[6, vi].Value.ToString();
+            _Hospede.Numero = Int32.Parse(dgListaHospedes[7, vi].Value.ToString());
+            _Hospede.Complemento = dgListaHospedes[8, vi].Value.ToString();
+            _Hospede.Bairro = dgListaHospedes[9, vi].Value.ToString();
+            _Hospede.Cidade = dgListaHospedes[10, vi].Value.ToString();
+            _Hospede.Uf = dgListaHospedes[11, vi].Value.ToString();
+            _Hospede.Cep = dgListaHospedes[12, vi].Value.ToString();
+            _Hospede.Datcadastro = DateTime.Parse(dgListaHospedes[13, vi].Value.ToString());
+
         }
 
         private void FormatarGrid()
@@ -78,6 +90,11 @@ namespace wf_hotel
         {
             SelecionaEstadoGridHospedes();
             this.Close();
+        }
+
+        private void dgListaHospedes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

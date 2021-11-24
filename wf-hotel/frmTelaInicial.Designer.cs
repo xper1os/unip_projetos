@@ -65,38 +65,38 @@ namespace wf_hotel
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             // 
             // reservasToolStripMenuItem
             // 
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
             // estoqueToolStripMenuItem
             // 
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // lblKonohasPallaceHotelInicio
             // 
             this.lblKonohasPallaceHotelInicio.AutoSize = true;
             this.lblKonohasPallaceHotelInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKonohasPallaceHotelInicio.Location = new System.Drawing.Point(65, 238);
+            this.lblKonohasPallaceHotelInicio.Location = new System.Drawing.Point(111, 236);
             this.lblKonohasPallaceHotelInicio.Name = "lblKonohasPallaceHotelInicio";
-            this.lblKonohasPallaceHotelInicio.Size = new System.Drawing.Size(318, 25);
+            this.lblKonohasPallaceHotelInicio.Size = new System.Drawing.Size(212, 25);
             this.lblKonohasPallaceHotelInicio.TabIndex = 1;
-            this.lblKonohasPallaceHotelInicio.Text = "KONOHA\'S PALLACE HOTEL ®";
+            this.lblKonohasPallaceHotelInicio.Text = "KONOHA PALACE ®";
             // 
             // frmTelaInicial
             // 

@@ -43,15 +43,16 @@ namespace wf_hotel
             this.dgListaHospedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaHospedes.Location = new System.Drawing.Point(12, 12);
             this.dgListaHospedes.Name = "dgListaHospedes";
-            this.dgListaHospedes.Size = new System.Drawing.Size(333, 274);
+            this.dgListaHospedes.Size = new System.Drawing.Size(1312, 251);
             this.dgListaHospedes.TabIndex = 0;
+            this.dgListaHospedes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaHospedes_CellContentClick);
             // 
             // _btnUpdateHospede
             // 
             this._btnUpdateHospede.BackColor = System.Drawing.Color.White;
             this._btnUpdateHospede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_btnUpdateHospede.BackgroundImage")));
             this._btnUpdateHospede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this._btnUpdateHospede.Location = new System.Drawing.Point(157, 292);
+            this._btnUpdateHospede.Location = new System.Drawing.Point(702, 269);
             this._btnUpdateHospede.Name = "_btnUpdateHospede";
             this._btnUpdateHospede.Size = new System.Drawing.Size(44, 50);
             this._btnUpdateHospede.TabIndex = 8;
@@ -63,7 +64,7 @@ namespace wf_hotel
             this.btnFechaListaHospede.BackColor = System.Drawing.Color.White;
             this.btnFechaListaHospede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechaListaHospede.BackgroundImage")));
             this.btnFechaListaHospede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFechaListaHospede.Location = new System.Drawing.Point(301, 292);
+            this.btnFechaListaHospede.Location = new System.Drawing.Point(846, 269);
             this.btnFechaListaHospede.Name = "btnFechaListaHospede";
             this.btnFechaListaHospede.Size = new System.Drawing.Size(44, 50);
             this.btnFechaListaHospede.TabIndex = 9;
@@ -75,7 +76,7 @@ namespace wf_hotel
             this.btnSelecionaHospede.BackColor = System.Drawing.Color.White;
             this.btnSelecionaHospede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelecionaHospede.BackgroundImage")));
             this.btnSelecionaHospede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSelecionaHospede.Location = new System.Drawing.Point(12, 292);
+            this.btnSelecionaHospede.Location = new System.Drawing.Point(557, 269);
             this.btnSelecionaHospede.Name = "btnSelecionaHospede";
             this.btnSelecionaHospede.Size = new System.Drawing.Size(44, 50);
             this.btnSelecionaHospede.TabIndex = 10;
@@ -87,7 +88,7 @@ namespace wf_hotel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(356, 382);
+            this.ClientSize = new System.Drawing.Size(1336, 327);
             this.Controls.Add(this.btnSelecionaHospede);
             this.Controls.Add(this.btnFechaListaHospede);
             this.Controls.Add(this._btnUpdateHospede);

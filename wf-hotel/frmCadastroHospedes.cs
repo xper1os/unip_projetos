@@ -34,6 +34,18 @@ namespace wf_hotel
             clsModelHospede _InsereHospede = new clsModelHospede();
             _InsereHospede.PrimeiroNomeHospede = txtPrimeiroNomeHospede.Text;
             _InsereHospede.UltimoNomeHospede = txtUltimoNomeHospede.Text;
+            _InsereHospede.Cpf = Decimal.Parse(txtCpf.Text);
+            _InsereHospede.Rg = txtRg.Text;
+            _InsereHospede.Email = txtEmail.Text;
+            _InsereHospede.Logradouro = txtLogradouro.Text;
+            _InsereHospede.Numero = Int32.Parse(txtNumeroCasa.Text);
+            _InsereHospede.Complemento = txtComplemento.Text;
+            _InsereHospede.Bairro = txtBairro.Text;
+            _InsereHospede.Cidade = txtCidade.Text;
+            _InsereHospede.Uf = txtUfHospede.Text;
+            _InsereHospede.Cep = txtCep.Text;
+            _InsereHospede.Datcadastro = DateTime.Parse(txtDataCadastro.Text = DateTime.Now.ToString("d-M-yyyy"));
+
 
             clsRegrasHospedes _SalvaHospede = new clsRegrasHospedes();
             _SalvaHospede.Salvar(_InsereHospede);
@@ -42,6 +54,7 @@ namespace wf_hotel
             //informa o proximo código à ser gerado na sequencia
             clsRegrasHospedes _ExibeId = new clsRegrasHospedes();
             txtCodigoHospede.Text = _ExibeId.ObterProximoID().ToString();
+           
 
             LimparCampos();
         }
@@ -51,6 +64,7 @@ namespace wf_hotel
             //carrega o próximo código do hóspede ao abrir a tela 
             clsRegrasHospedes _ExibeId = new clsRegrasHospedes();
             txtCodigoHospede.Text = _ExibeId.ObterProximoID().ToString();
+            txtDataCadastro.Text = DateTime.Now.ToString("d-M-yyyy");
 
         }
 
@@ -61,6 +75,17 @@ namespace wf_hotel
             _AtualizaHospede.IdHospede = Int32.Parse(txtCodigoHospede.Text);
             _AtualizaHospede.PrimeiroNomeHospede = txtPrimeiroNomeHospede.Text;
             _AtualizaHospede.UltimoNomeHospede = txtUltimoNomeHospede.Text;
+            _AtualizaHospede.Cpf = Decimal.Parse(txtCpf.Text);
+            _AtualizaHospede.Rg = txtRg.Text;
+            _AtualizaHospede.Email = txtEmail.Text;
+            _AtualizaHospede.Logradouro = txtLogradouro.Text;
+            _AtualizaHospede.Numero = Int32.Parse(txtNumeroCasa.Text);
+            _AtualizaHospede.Complemento = txtComplemento.Text;
+            _AtualizaHospede.Bairro = txtBairro.Text;
+            _AtualizaHospede.Cidade = txtCidade.Text;
+            _AtualizaHospede.Uf = txtUfHospede.Text;
+            _AtualizaHospede.Cep = txtCep.Text;
+            _AtualizaHospede.Datcadastro = DateTime.Parse(txtDataCadastro.Text = DateTime.Now.ToString("d-M-yyyy"));
 
             clsRegrasHospedes _AtualizaDados = new clsRegrasHospedes();
             _AtualizaDados.Atualiza(_AtualizaHospede);
@@ -94,6 +119,17 @@ namespace wf_hotel
                 txtCodigoHospede.Text = vHospedes._Hospede.IdHospede.ToString();
                 txtPrimeiroNomeHospede.Text = vHospedes._Hospede.PrimeiroNomeHospede.ToString();
                 txtUltimoNomeHospede.Text = vHospedes._Hospede.UltimoNomeHospede.ToString();
+                txtCpf.Text = vHospedes._Hospede.Cpf.ToString();
+                txtRg.Text = vHospedes._Hospede.Rg.ToString();
+                txtEmail.Text = vHospedes._Hospede.Email.ToString();
+                txtLogradouro.Text = vHospedes._Hospede.Logradouro.ToString();
+                txtNumeroCasa.Text = vHospedes._Hospede.Numero.ToString();
+                txtComplemento.Text = vHospedes._Hospede.Complemento.ToString();
+                txtBairro.Text = vHospedes._Hospede.Bairro.ToString();
+                txtCidade.Text = vHospedes._Hospede.Cidade.ToString();
+                txtUfHospede.Text = vHospedes._Hospede.Uf.ToString();
+                txtCep.Text = vHospedes._Hospede.Cep.ToString();
+                txtDataCadastro.Text = vHospedes._Hospede.Datcadastro.ToString();
 
             }
         }

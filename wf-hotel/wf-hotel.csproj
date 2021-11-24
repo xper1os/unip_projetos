@@ -62,6 +62,12 @@
     <Compile Include="frmListaHospedes.Designer.cs">
       <DependentUpon>frmListaHospedes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaReserva.Designer.cs">
+      <DependentUpon>frmListaReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaHospedes.resx">
       <DependentUpon>frmListaHospedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaReserva.resx">
+      <DependentUpon>frmListaReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTelaInicial.resx">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>

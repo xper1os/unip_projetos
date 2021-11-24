@@ -17,3 +17,4 @@ C:\Users\m-mor\source\repos\sl-hotel\wf-hotel\bin\Debug\cl-Dal.pdb
 C:\Users\m-mor\source\repos\sl-hotel\wf-hotel\obj\Debug\wf-hotel.csproj.CopyComplete
 C:\Users\m-mor\source\repos\sl-hotel\wf-hotel\obj\Debug\wf_hotel.frmListaHospedes.resources
 C:\Users\m-mor\source\repos\sl-hotel\wf-hotel\obj\Debug\wf_hotel.frmCadastroReserva.resources
+C:\Users\m-mor\source\repos\sl-hotel\wf-hotel\obj\Debug\wf_hotel.frmListaReserva.resources

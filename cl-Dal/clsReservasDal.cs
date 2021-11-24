@@ -61,28 +61,121 @@ namespace cl_Dal
 
         public void CadastrarReserva(clsModelReservas _Cadastra)
         {
-            
+           
+
             Int32 vCodigo = ObterProximoID();
             _Conexao = Conexao.ObterConexao();
             _Comando = new SqlCommand();
             _Comando.Connection = _Conexao;
-            _Comando.CommandText = " insert into Reservas values(@codigoReserva, @codigoHospede, @dataCheckIn," +
-                "@dataCheckOut, @qtdHospede, @tipoQuarto, @tipoPagamento, @dataPagamento, @valor, @dataCadastro); ";
-            _Comando.Parameters.Add("@codigoReserva", SqlDbType.Int).Value = vCodigo;
-            _Comando.Parameters.Add("@codigoHospede", SqlDbType.Int).Value = _Cadastra.IdHospede;
-            _Comando.Parameters.Add("@dataCheckIn", SqlDbType.Date).Value = _Cadastra.DataCheckIn;
-            _Comando.Parameters.Add("@dataCheckOut", SqlDbType.Date).Value = _Cadastra.DataCheckOut;
-            _Comando.Parameters.Add("@qtdHospede", SqlDbType.VarChar).Value = _Cadastra.QtdHospede;
-          // _Comando.Parameters.Add("@tipoQuarto", SqlDbType.VarChar).Value = _Cadastra.TipoQuarto;
-          //  _Comando.Parameters.Add("@tipoPagamento", SqlDbType.VarChar).Value = _Cadastra.TipoPagamento;
-          //  _Comando.Parameters.Add("@dataPagamento", SqlDbType.VarChar).Value = _Cadastra.DataPagamento;
-          //  _Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = _Cadastra.Valor;
-          //  _Comando.Parameters.Add("@dataCadastro", SqlDbType.VarChar).Value = _Cadastra.DataCadastro;
-            
+            _Comando.CommandText = " insert into Reservas values(@idreserva,   @idhospede,  @datcheckin," +
+                                                                "@datcheckout, @qtdhospede, @idquarto, @idpagamento, @datapagamento, @valor, @datacadastro); ";
+            _Comando.Parameters.Add("@idreserva", SqlDbType.Int).Value = vCodigo;
+            _Comando.Parameters.Add("@idhospede", SqlDbType.Int).Value = _Cadastra.IdHospede;
+            _Comando.Parameters.Add("@datcheckin", SqlDbType.Date).Value = _Cadastra.DataCheckIn;
+            _Comando.Parameters.Add("@datcheckout", SqlDbType.Date).Value = _Cadastra.DataCheckOut;
+            _Comando.Parameters.Add("@qtdhospede", SqlDbType.VarChar).Value = _Cadastra.QtdHospede;
+            _Comando.Parameters.Add("@idquarto", SqlDbType.Int).Value = _Cadastra.IdQuarto;
+            _Comando.Parameters.Add("@idpagamento", SqlDbType.Int).Value = _Cadastra.IdPagamento;
+            _Comando.Parameters.Add("@datapagamento", SqlDbType.Date).Value = _Cadastra.DataPagamento;
+            _Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = _Cadastra.Valor;
+            _Comando.Parameters.Add("@datacadastro", SqlDbType.Date).Value = _Cadastra.DataCadastro;
+
             _Comando.ExecuteNonQuery();
 
             Conexao.FecharConexao();
 
+        }
+
+        public DataTable ListarQuartos()
+        {   //aqui teremos o select
+            _Conexao = Conexao.ObterConexao();
+
+            _Comando = new SqlCommand();
+            _Comando.Connection = _Conexao;
+            _Comando.CommandText = " select idquarto, tipoquarto from Quarto " +
+                                   " order by idquarto ;";
+
+            _Tabela = new DataTable();
+            _Adaptador = new SqlDataAdapter(_Comando);
+            _Adaptador.Fill(_Tabela);
+
+            Conexao.FecharConexao();
+
+            return _Tabela;
+        }
+
+        public DataTable ListarTiposPagamentos()
+        {   //aqui teremos o select
+            _Conexao = Conexao.ObterConexao();
+
+            _Comando = new SqlCommand();
+            _Comando.Connection = _Conexao;
+            _Comando.CommandText = " select idpagamento, tipopagamento from Pagamento " +
+                                   " order by idpagamento ;";
+
+            _Tabela = new DataTable();
+            _Adaptador = new SqlDataAdapter(_Comando);
+            _Adaptador.Fill(_Tabela);
+
+            Conexao.FecharConexao();
+
+            return _Tabela;
+        }
+
+        public void AtualizaReserva(clsModelReservas _Atualiza)
+        {
+            _Conexao = Conexao.ObterConexao();
+            _Comando = new SqlCommand();
+            _Comando.Connection = _Conexao;
+            _Comando.CommandText = " update Reservas set idhospede = @idhospede, datcheckin = @datacheckin, datcheckout = @datacheckout, qtdhospede = @qtdhospede, idquarto = @idquarto, idpagamento = @idpagamento, datpagamento = @datpagamento, valor = @valor, datacadastro = @datacadastro " +
+                " where idreserva = @idreserva";
+            _Comando.Parameters.Add("@idreserva", SqlDbType.Int).Value = _Atualiza.IdReserva;
+            _Comando.Parameters.Add("@idhospede", SqlDbType.Int).Value = _Atualiza.IdHospede;
+            _Comando.Parameters.Add("@datacheckin", SqlDbType.DateTime).Value = _Atualiza.DataCheckIn;
+            _Comando.Parameters.Add("@datacheckout", SqlDbType.DateTime).Value = _Atualiza.DataCheckIn;
+            _Comando.Parameters.Add("@qtdhospede", SqlDbType.Int).Value = _Atualiza.QtdHospede;
+            _Comando.Parameters.Add("@idquarto", SqlDbType.Int).Value = _Atualiza.IdQuarto;
+            _Comando.Parameters.Add("@idpagamento", SqlDbType.Int).Value = _Atualiza.IdPagamento;
+            _Comando.Parameters.Add("@datpagamento", SqlDbType.DateTime).Value = _Atualiza.DataPagamento;
+            _Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = _Atualiza.Valor;
+            _Comando.Parameters.Add("@datacadastro", SqlDbType.DateTime).Value = _Atualiza.DataCadastro;
+
+
+            _Comando.ExecuteNonQuery();
+
+            Conexao.FecharConexao();
+        }
+
+
+        public void ExcluirReserva(Int32 _Excluir)
+        {
+            _Conexao = Conexao.ObterConexao();
+            _Comando = new SqlCommand();
+            _Comando.Connection = _Conexao;
+            _Comando.CommandText = " delete Reservas " +
+                                    "where idreserva = @codigo";
+            _Comando.Parameters.Add("@codigo", SqlDbType.Int).Value = _Excluir;
+            _Comando.ExecuteNonQuery();
+
+            Conexao.FecharConexao();
+        }
+
+        public DataTable ListarReservas()
+        {   //aqui teremos o select
+            _Conexao = Conexao.ObterConexao();
+
+            _Comando = new SqlCommand();
+            _Comando.Connection = _Conexao;
+            _Comando.CommandText = " select idreserva, idhospede, datcheckin,datcheckout,qtdhospede,idquarto,idpagamento,datpagamento,valor,datacadastro from Reservas " +
+                                   "order by idreserva desc; ";
+
+            _Tabela = new DataTable();
+            _Adaptador = new SqlDataAdapter(_Comando);
+            _Adaptador.Fill(_Tabela);
+
+            Conexao.FecharConexao();
+
+            return _Tabela;
         }
 
     }
